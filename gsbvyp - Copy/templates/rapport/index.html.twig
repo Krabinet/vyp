@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<section class="col-sm-8"><!-- #content -->
+    <h2>Voir les rapports</h2>
+    {% for unRapport in LesRapports %} 
+    <div class='row'>
+        {% set id=unRapport.id %}
+        {% set motif=unRapport.motif %}
+        {% set bilan=unRapport.bilan %}
+        <div class='col-sm-4'>
+            {{motif}}
+        </div>
+        <div class='col-sm-4'>
+            {{bilan}}
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
