@@ -121,7 +121,7 @@ class Rapport
         return $this;
     }
 
-    /*public function getDate()
+    public function getDate()
     {
         return $this->date;
     }
@@ -131,6 +131,5 @@ class Rapport
         $this->date = $date;
 
         return $this;
-    }*/
-
+    }
 }

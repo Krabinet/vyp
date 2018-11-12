@@ -11,6 +11,7 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  * @method Rapport|null findOneBy(array $criteria, array $orderBy = null)
  * @method Rapport[]    findAll()
  * @method Rapport[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Rapport[]    findAllOrder()
  */
 class RapportRepository extends ServiceEntityRepository
 {
@@ -37,6 +38,16 @@ class RapportRepository extends ServiceEntityRepository
     */
 
     /*
+    public function findAllOrder($value)
+    {
+        return $this->createQueryBuilder('r')
+            ->orderBy('r.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+    }
+    */
+
+    /*
     public function findOneBySomeField($value): ?Rapport
     {
         return $this->createQueryBuilder('r')
@@ -47,4 +58,6 @@ class RapportRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    
 }
