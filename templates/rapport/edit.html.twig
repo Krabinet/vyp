@@ -3,11 +3,12 @@
 {% block title %}Edit Rapport{% endblock %}
 
 {% block body %}
-    <h1>Edit Rapport</h1>
-
+    <h1>Modifier le rapport</h1>
+<center>
     {{ include('rapport/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('rapport_index') }}">back to list</a>
+    <a href="{{ path('rapport_index') }}">Retour la la liste des rapports</a>
 
-    {{ include('rapport/_delete_form.html.twig') }}
+    {#{{ include('rapport/_delete_form.html.twig') }}#}
+</center>
 {% endblock %}
