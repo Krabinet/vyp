@@ -9,6 +9,7 @@
         <thead>
             <tr>
                 <th>Id</th>
+                
                 <th>Motif</th>
                 <th>Bilan</th>
                 <th>actions</th>
@@ -18,9 +19,14 @@
         {% for rapport in rapports %}
             <tr>
                 <td>{{ rapport.id }}</td>
+                
                 <td>{{ rapport.motif }}</td>
                 <td>{{ rapport.bilan }}</td>
-                </tr>
+                <td>
+                    <a href="{{ path('rapport_show', {'id': rapport.id}) }}">show</a>
+                    <a href="{{ path('rapport_edit', {'id': rapport.id}) }}">edit</a>
+                </td>
+            </tr>
         {% else %}
             <tr>
                 <td colspan="5">no records found</td>
@@ -29,5 +35,5 @@
         </tbody>
     </table>
 
-    
+    <a href="{{ path('rapport_new') }}">Create new</a>
 {% endblock %}
