@@ -21,7 +21,7 @@ class RapportController extends AbstractController
     {
         $rapports = $this->getDoctrine()
             ->getRepository(Rapport::class)
-            ->findAllOrder();
+            ->findAll();
 
         return $this->render('rapport/index.html.twig', ['rapports' => $rapports]);
     }
@@ -32,7 +32,7 @@ class RapportController extends AbstractController
     public function new(Request $request): Response
     {
         $rapport = new Rapport();
-        $form = $this->createForm(Rapport1Type::class, $rapport);
+        $form = $this->createForm(RapportType::class, $rapport);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -62,7 +62,7 @@ class RapportController extends AbstractController
      */
     public function edit(Request $request, Rapport $rapport): Response
     {
-        $form = $this->createForm(Rapport1Type::class, $rapport);
+        $form = $this->createForm(RapportType::class, $rapport);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

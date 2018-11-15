@@ -20,6 +20,14 @@ class RapportRepository extends ServiceEntityRepository
         parent::__construct($registry, Rapport::class);
     }
 
+    public function findAllOrder()
+    {
+        $querybuilder = $this->createQueryBuilder('r')
+            ->orderBy('r.id', 'ASC')
+            ->getQuery();
+        return $querybuilder->getResult();
+    }
+
 //    /**
 //     * @return Rapport[] Returns an array of Rapport objects
 //     */
@@ -38,12 +46,12 @@ class RapportRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findAllOrder($value)
+    public function findAllOrder()
     {
         return $this->createQueryBuilder('r')
             ->orderBy('r.id', 'ASC')
             ->getQuery()
-            ->getResult()
+            ->getResult();
     }
     */
 
@@ -61,3 +69,4 @@ class RapportRepository extends ServiceEntityRepository
 
     
 }
+?>
