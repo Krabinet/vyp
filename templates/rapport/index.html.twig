@@ -8,7 +8,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Date</th>
                 <th>Motif</th>
                 <th>Bilan</th>
                 <th>actions</th>
@@ -17,7 +17,7 @@
         <tbody>
         {% for rapport in rapports %}
             <tr>
-                <td>{{ rapport.id }}</td>
+                <td>{{ rapport.date }}</td>
                 <td>{{ rapport.motif }}</td>
                 <td>{{ rapport.bilan }}</td>
                 <td><a href="{{ path('rapport_edit', {'id': rapport.id}) }}">edit</a></td>
