@@ -46,16 +46,6 @@ class RapportRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findAllOrder()
-    {
-        return $this->createQueryBuilder('r')
-            ->orderBy('r.id', 'ASC')
-            ->getQuery()
-            ->getResult();
-    }
-    */
-
-    /*
     public function findOneBySomeField($value): ?Rapport
     {
         return $this->createQueryBuilder('r')
