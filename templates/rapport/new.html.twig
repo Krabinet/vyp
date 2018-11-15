@@ -7,6 +7,7 @@
     <h1>Créer un nouveau rapport :</h1>
 
     {{ include('rapport/_form.html.twig') }}
+<br />
+    <a href="{{ path('rapport_index') }}">Retour à la liste des rapports</a>
 </center>
-    <a href="{{ path('rapport_index') }}">back to list</a>
 {% endblock %}
