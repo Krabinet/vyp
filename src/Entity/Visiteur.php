@@ -77,5 +77,106 @@ class Visiteur
      */
     private $dateembauche;
 
+    public function getId(): ?string
+    {
+        return $this->id;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(?string $nom): self
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(?string $prenom): self
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function getLogin(): ?string
+    {
+        return $this->login;
+    }
+
+    public function setLogin(?string $login): self
+    {
+        $this->login = $login;
+
+        return $this;
+    }
+
+    public function getMdp(): ?string
+    {
+        return $this->mdp;
+    }
+
+    public function setMdp(?string $mdp): self
+    {
+        $this->mdp = $mdp;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(?string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getCodepostal(): ?string
+    {
+        return $this->codepostal;
+    }
+
+    public function setCodepostal(?string $codepostal): self
+    {
+        $this->codepostal = $codepostal;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?string $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getDateembauche(): ?\DateTimeInterface
+    {
+        return $this->dateembauche;
+    }
+
+    public function setDateembauche(?\DateTimeInterface $dateembauche): self
+    {
+        $this->dateembauche = $dateembauche;
+
+        return $this;
+    }
+
 
 }

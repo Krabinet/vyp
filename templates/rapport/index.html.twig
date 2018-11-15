@@ -3,8 +3,8 @@
 {% block title %}Rapport index{% endblock %}
 
 {% block body %}
-    <h1>Rapport index</h1>
-
+    <h1>Liste des rapports</h1>
+    <a href="{{ path('rapport_new') }}">Nouveau rapport</a>
     <table class="table">
         <thead>
             <tr>
@@ -20,7 +20,10 @@
                 <td>{{ rapport.id }}</td>
                 <td>{{ rapport.motif }}</td>
                 <td>{{ rapport.bilan }}</td>
+                <td><a href="{{ path('rapport_edit', {'id': rapport.id}) }}">edit</a></td>
+                <td><a href="{{ path('rapport_show', {'id': rapport.id}) }}">show</a></td>
                 </tr>
+                
         {% else %}
             <tr>
                 <td colspan="5">no records found</td>
