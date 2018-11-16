@@ -3,9 +3,11 @@
 {% block title %}New Rapport{% endblock %}
 
 {% block body %}
-    <h1>Create new Rapport</h1>
+<center>
+    <h1>Créer un nouveau rapport :</h1>
 
     {{ include('rapport/_form.html.twig') }}
-
-    <a href="{{ path('rapport_index') }}">back to list</a>
+<br />
+    <a href="{{ path('rapport_index') }}" target="_blank">Retour à la liste des rapports</a>
+</center>
 {% endblock %}
