@@ -16,12 +16,4 @@ class MedecinController extends AbstractController
             'controller_name' => 'MedecinController',
         ]);
     }
-    /**
-     * @Route("/medecin/lol", name="medecinlol")
-     */
-    public function lol(){
-        return $this->render('medecin/lol.html.twig',[
-            'controller_name' => 'MedecinController',
-        ]);
-    }
 }

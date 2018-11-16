@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints\DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -24,9 +25,9 @@ class Rapport
     private $id;
 
     /**
-     * @var \DateTime|null
+     * @var \String|null
      *
-     * @ORM\Column(name="date", type="date", nullable=true)
+     * @ORM\Column(name="date", type="string", nullable=true)
      */
     private $date;
 
