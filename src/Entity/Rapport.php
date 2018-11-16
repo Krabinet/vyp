@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -121,7 +123,7 @@ class Rapport
         return $this;
     }
 
-    /*public function getDate()
+    public function getDate()
     {
         return $this->date;
     }
@@ -131,6 +133,59 @@ class Rapport
         $this->date = $date;
 
         return $this;
-    }*/
+    }
 
+    public function getidvisiteur()
+    {
+        return $this->idvisiteur;
+    }
+
+    public function setidvisiteur($idvisiteur): self
+    {
+        $this->idvisiteur = $idvisiteur;
+
+        return $this;
+    }
+
+    public function getidmedecin()
+    {
+        return $this->idmedecin;
+    }
+
+    public function setidmedecin($idmedecin): self
+    {
+        $this->idmedecin = $idmedecin;
+
+        return $this;
+    }
+
+    public function getidmedicament()
+    {
+        return $this->idmedicament;
+    }
+
+    public function setidmedicament($idmedicament): self
+    {
+        $this->idmedicament = $idmedicament;
+
+        return $this;
+    }
+
+    public function addIdmedicament(Medicament $idmedicament): self
+    {
+        if (!$this->idmedicament->contains($idmedicament)) {
+            $this->idmedicament[] = $idmedicament;
+        }
+
+        return $this;
+    }
+
+    public function removeIdmedicament(Medicament $idmedicament): self
+    {
+        if ($this->idmedicament->contains($idmedicament)) {
+            $this->idmedicament->removeElement($idmedicament);
+        }
+
+        return $this;
+    }
 }

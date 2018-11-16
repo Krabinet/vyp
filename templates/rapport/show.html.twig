@@ -3,7 +3,7 @@
 {% block title %}Rapport{% endblock %}
 
 {% block body %}
-    <h1>Rapport</h1>
+    <h1>Visualiser le rapport</h1>
 
     <table class="table">
         <tbody>
@@ -26,7 +26,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('rapport_index') }}">back to list</a>
+    <a href="{{ path('rapport_index') }}">Retour à la liste des rapports</a>
 
     <a href="{{ path('rapport_edit', {'id': rapport.id}) }}">edit</a>
 
