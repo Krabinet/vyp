@@ -24,9 +24,9 @@ class Rapport
     private $id;
 
     /**
-     * @var \DateTime|null
+     * @var \String|null
      *
-     * @ORM\Column(name="date", type="date", nullable=true)
+     * @ORM\Column(name="date", type="string", nullable=true)
      */
     private $date;
 
