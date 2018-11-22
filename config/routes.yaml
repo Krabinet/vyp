@@ -1,3 +1,7 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+#rapport:
+#    path: /rapport
+#    controller: App\Controller\RapportController::rapport
